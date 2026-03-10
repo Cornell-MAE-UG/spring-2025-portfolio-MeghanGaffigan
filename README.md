@@ -18,15 +18,9 @@ The workflow of editing and publishing your portfolio goes as follows:
 ## Creating a Local Copy
 There are three ways to set up a working copy of the portfolio code for you to edit. From easy to hard: you can either **create an online workspace** on called "Codespace", or clone the code directly **inside Visual Studio Code** for editing, committing, and pushing, or **use the git command line interface (CLI)** to maintain your local copy.
 
-### Using Codespaces
-
-You can use the online [Codespaces](https://github.com/features/codespaces) environments for development. Please read more about this feature in the following [link](https://github.com/features/codespaces). This option is available to you through the "Code" button as shown in the image below. This starts an online space for you to edit, test, and commit your work.
-
-<img src="assets/images/codespace-button.png" width="400" />
-
 ### Using Visual Studio Code
 
-Alternatively, you can use [VS Code](https://code.visualstudio.com/) to clone your code, edit, test, and publish it from your laptop. This means you can work offline and generally have full control of your code. 
+You can use [VS Code](https://code.visualstudio.com/) to clone your code, edit, test, and publish it from your laptop. This means you can work offline and generally have full control of your code. 
 
 Download and install VS Code. When you open it, choose "Clone Git Repository" to start a new project from your repository. Then enter the repo URL (also under the "Code" button in GitHub). 
 
@@ -34,6 +28,12 @@ Download and install VS Code. When you open it, choose "Clone Git Repository" to
 
 
 You can then use VS Code for editing and [Git actions](https://code.visualstudio.com/docs/sourcecontrol/overview). Please refer to the [VS Code documentation](https://code.visualstudio.com/docs/) for more information. 
+
+### Using Codespaces
+
+Alternatively, you can use the online [Codespaces](https://github.com/features/codespaces) environments for development. Please read more about this feature through the following [link](https://github.com/features/codespaces). This option is available to you through the "Code" button as shown in the image below. This starts an online space for you to edit, test, and commit your work.
+
+<img src="assets/images/codespace-button.png" width="400" />
 
 ### Using the Git CLI
 
@@ -54,11 +54,13 @@ GitHub Pages, the framework powering the portfolio system, uses [Jekyll](https:/
 
 ### Name
 
-Change references to "Your Name" to your actual name in the following files:
+Change references to `<Your Name>` to your actual name in the following files:
 - `_config.yml`
 - `index.md`
 - `projects.md`
 - `cv.md`
+
+No need to keep the `< >` brackets. They are just there to indicate placeholders.
 
 ### Homepage
 - `index.md`: Replace the placeholder text with a welcome or pitch paragraph about yourself.
@@ -114,7 +116,13 @@ and then Ruby:
 brew install ruby
 ```
 
-Verify that you have the latest Ruby version: 
+Make sure your system uses the `homebrew` version, add the following line to either `~/.bashrc` or `~/.zshrc`. Do determine what shell you are using, you can run `echo $SHELL`.
+
+```
+export PATH="/opt/homebrew/opt/ruby/bin:$PATH"
+```
+
+Close your terminal and reopen it to load your configuration. Now verify that you have the latest Ruby version: 
 ```
 ruby -v
 ```
@@ -146,6 +154,8 @@ You can access the site at the URL shown by the `serve` command. It looks someth
 
 ## Publishing your Portfolio to the Web
 
+### Push your Changes to GitHub
+
 Once everything looks good, commit and push your changes. In the command line, run the following commands. Ideally, you would have added and committed many times locally before pushing to Github.
 
 ```bash
@@ -156,17 +166,27 @@ git push origin main
 
 In VS Code or Codespaces, you can use the Git interface inside the development environment to stage (add), commit, and push your changes.
 
-### Checklist
+### Set Up GitHub Pages
 
-To make sure your portfolio is published, you need to confirm in the repository's settings that:
+Follow these steps to publish your portfolio:
 
-1. Your repository is public (under Settings > General, scroll to the bottom and find "Visibility")
-2. You are serving GitHub Pages from the `main` branch (under Settings > Pages)
+1. In your `_config.yml` file, set the `baseurl` to your portfolio repo name (e.g., `"/spring-2025-portfolio-Hoffman/"`)
+
+
+1. Go to your repository's Settings
+<img src="assets/images/settings.png" width="600" />
+
+3. Choose the "Pages" tab under "Build and Deployment", verify that "Source" says "Deploy from a branch" and under "Branch" choose `main` and `/ (root)`
+<img src="assets/images/pages-settings.png" width="600" />
+
+4. Don't forget to save this setting at the bottom of the page.
 
 ### Your Published Portfolio Site
-Your portfolio should be live at `https://cornell-mae-ug.github.io/<your-repo>/`, where `your-repo` is this repository's name, probably `portfolio-<your-github-username>`.
+Your portfolio should be live at `https://cornell-mae-ug.github.io/<your-repo>/`, where `your-repo` is this repository's name, probably `portfolio-<your-github-username>`. This URL is also shown in your Pages setting tab.
 
 :tada:
+
+**You can now replace this template README file with a more informative text**, but check out additional tips and tricks below.
 
 ### More Control over Publishing
 

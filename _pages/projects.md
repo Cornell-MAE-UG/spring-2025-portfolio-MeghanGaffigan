@@ -1,8 +1,10 @@
 ---
 layout: default
-title: <Your Name> - Portfolio
+title: Meghan Gaffigan - Portfolio
 permalink: /projects/
 ---
+
+
 
 <div class="gallery-container">
 <div class="project-gallery">

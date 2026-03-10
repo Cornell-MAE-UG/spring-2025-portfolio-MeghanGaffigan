@@ -11,10 +11,9 @@ locale                   : "en-US"
 title                    : Meghan Gaffigan
 title_separator          : "-"
 subtitle                 : # site tagline that appears below site title in masthead
-name                     : Your Name
-description              : Your Name - Projects and CV 
-baseurl                  : "" # Set this to "portfolio-<your-github-username>" 
-url                      : # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
+name                     : Meghan Gaffigan
+description              : Meghan Gaffigan - Projects and CV 
+baseurl                  : "" # Set this to your repo name DONT CHANGE
 
 # Theme and Style
 theme: jekyll-theme-minimal
