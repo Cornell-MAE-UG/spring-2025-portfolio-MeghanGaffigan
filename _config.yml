@@ -13,7 +13,7 @@ title_separator          : "-"
 subtitle                 : # site tagline that appears below site title in masthead
 name                     : Meghan Gaffigan
 description              : Meghan Gaffigan - Projects and CV 
-baseurl                  : "" # Set this to your repo name DONT CHANGE
+baseurl                  : "/spring-2025-portfolio-MeghanGaffigan" # Set this to your repo name DONT CHANGE
 
 # Theme and Style
 theme: jekyll-theme-minimal
